@@ -1,0 +1,32 @@
+// *************************************
+//
+//   Grid
+//   -> A simple flexbox grid system
+//
+// *************************************
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  width: $grid-width;
+}
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Row ----- //
+
+.grid-row {
+  @extend %row;
+}
+
+// ----- Column ----- //
+
+@for $i from 1 to $grid-columns {
+  .grid-col-#{$i} {
+    @include span-columns($i);
+  }
+}

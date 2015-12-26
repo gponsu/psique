@@ -1,0 +1,64 @@
+// *************************************
+//
+//   Variables
+//   -> Colors, Fonts
+//
+// *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$c-black: #333 !default;
+$c-gray: #f4f9f8 !default;
+$c-primary: #099 !default;
+$c-secondary: #f93 !default;
+$c-white: #fff !default;
+
+// ----- Base ----- //
+
+$c-alert: #ff6962 !default;
+$c-background-invert: $c-white !default;
+$c-background: darken($c-primary, 23%) !default;
+$c-border: desaturate(lighten($c-primary, 53%), 60%) !default;
+$c-highlight: $c-secondary !default;
+$c-subdue: desaturate(darken($c-secondary, 6%), 22%) !default;
+$c-text-invert: $c-white !default;
+$c-text: $c-black !default;
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$border-box-sizing: true !default;
+
+// ----- Typography ----- //
+
+$font-family-heading: 'PT Sans', sans-serif !default;
+$font-family: 'PT Sans', sans-serif !default;
+$font-size-headings: (
+  'h1': rem(68),
+  'h2': rem(48),
+  'h3': rem(38),
+  'h4': rem(30),
+  'h5': rem(24),
+  'h6': rem(18),
+) !default;
+$font-size: rem(16) !default;
+$font-size-small: rem(14) !default;
+$font-size-tiny: rem(12) !default;
+$line-height: 1.2rem !default;
+
+// -------------------------------------
+//   Layout
+// -------------------------------------
+
+// ----- Grid ----- //
+
+$grid-width: rem(1200) !default;
+$grid-gutter: 1rem !default;
+$grid-columns: 12 !default;

@@ -1,0 +1,70 @@
+// *************************************
+//
+//   Foundation
+//   -> Tag-level settings
+//
+// *************************************
+
+// -------------------------------------
+//   Document
+// -------------------------------------
+
+@if $border-box-sizing {
+  html {
+    box-sizing: border-box;
+  }
+
+  * {
+    &,
+    &::after,
+    &::before {
+      box-sizing: inherit;
+    }
+  }
+}
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+// ----- Paragraphs ----- //
+
+p {
+  font-size: $font-size;
+
+  &.tiny {
+    font-size: $font-size-tiny;
+  }
+}
+
+small {
+  font-size: $font-size-small;
+}
+
+// ----- Headings ----- //
+
+@each $heading, $size in $font-size-headings {
+  #{$heading} {
+    font-size: $size;
+    line-height: $size;
+    margin: 1rem 0;
+  }
+}
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+// ----- Links ----- //
+
+a {
+  color: $c-highlight;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $c-subdue;
+    text-decoration: underline;
+  }
+}

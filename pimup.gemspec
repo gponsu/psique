@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency('sass', '~> 3.4')
+  s.add_dependency('bourbon', '~> 4.2')
 
   s.add_development_dependency 'bundler', '~> 1.10'
   s.add_development_dependency 'rake', '~> 10.0'

@@ -1,0 +1,7 @@
+@mixin span-columns($columns) {
+  @include flex(0 0 auto);
+  @include flex-basis(percentage($columns / $grid-columns));
+  max-width: percentage($columns / $grid-columns);
+  padding-left: ($grid-gutter / 2);
+  padding-right: ($grid-gutter / 2);
+}
