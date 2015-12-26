@@ -1,5 +1,5 @@
 require 'pimup/engine'
-require 'sass'
+require 'bourbon'
 
 module Pimup
 end
