@@ -1,3 +1,5 @@
+// ...
+// @access public
 @mixin span-columns($columns) {
   @include flex(0 0 auto);
   @include flex-basis(percentage($columns / $grid-columns));
@@ -20,5 +22,33 @@
   } @else {
     @error 'No value found for `#{$breakpoint}`. '
          + 'Please make sure it is defined in `$breakpoints` variable.';
+  }
+}
+
+// ...
+// @access public
+@mixin grid-columns {
+  $medias: join(null, zip(map-keys($breakpoints), $grid-defaults));
+
+  @each $media in $medias {
+    @include columns($media);
+  }
+}
+
+// ...
+// @access private
+@mixin columns($media: null) {
+  @for $columns from 1 through $grid-columns {
+    @if $media {
+      .grid-col-#{$columns}--#{nth($media, 2)} {
+        @include media(nth($media, 1)) {
+          @include span-columns($columns);
+        }
+      }
+    } @else {
+      .grid-col-#{$columns} {
+        @include span-columns($columns);
+      }
+    }
   }
 }

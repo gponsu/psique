@@ -57,7 +57,9 @@ $line-height: 1.2rem !default;
 //   Layout
 // -------------------------------------
 
-// ----- Breakpoints ----- //
+// ----- Grid ----- //
+
+// Breakpoints
 
 $breakpoints: (
   'small': rem(780),
@@ -65,8 +67,9 @@ $breakpoints: (
   'large': rem(1200),
 ) !default;
 
-// ----- Grid ----- //
+// Settings
 
-$grid-width: rem(1200) !default;
-$grid-gutter: 1rem !default;
+$grid-defaults: 'sm', 'md', 'lg' !default;
 $grid-columns: 12 !default;
+$grid-gutter: 1rem !default;
+$grid-width: auto !default;

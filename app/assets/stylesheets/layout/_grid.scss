@@ -28,8 +28,4 @@
 
 // ----- Column ----- //
 
-@for $i from 1 to $grid-columns {
-  .grid-col-#{$i} {
-    @include span-columns($i);
-  }
-}
+@include grid-columns;
