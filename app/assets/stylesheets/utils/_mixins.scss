@@ -5,3 +5,20 @@
   padding-left: ($grid-gutter / 2);
   padding-right: ($grid-gutter / 2);
 }
+
+/// Simple media queries.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin media($breakpoint) {
+  $min-width: map-get($breakpoints, $breakpoint);
+
+  @if $min-width {
+    @media (min-width: #{$min-width}) {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` variable.';
+  }
+}
