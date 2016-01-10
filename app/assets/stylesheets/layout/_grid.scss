@@ -10,7 +10,10 @@
   margin-right: auto;
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
-  width: $grid-width;
+
+  @include media('large') {
+    width: $grid-width;
+  }
 }
 
 // -------------------------------------
@@ -25,8 +28,4 @@
 
 // ----- Column ----- //
 
-@for $i from 1 to $grid-columns {
-  .grid-col-#{$i} {
-    @include span-columns($i);
-  }
-}
+@include grid-columns;
